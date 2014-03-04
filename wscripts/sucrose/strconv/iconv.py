@@ -18,6 +18,7 @@ def setup(
                     'tostring.cpp',
                     'toutf8.cpp',
                     'toutf16.cpp',
+                    'toutf32.cpp',
                 },
             },
         },
