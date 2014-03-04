@@ -16,6 +16,7 @@ def setup(
             MODULE_NAME : {
                 _IMPL_NAME : {
                     'tostring.cpp',
+                    'toutf8.cpp',
                 },
             },
         },
