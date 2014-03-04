@@ -17,6 +17,7 @@ def setup(
                 _IMPL_NAME : {
                     'tostring.cpp',
                     'toutf8.cpp',
+                    'toutf16.cpp',
                 },
             },
         },
