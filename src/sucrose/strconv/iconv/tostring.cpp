@@ -11,6 +11,8 @@ FgSize fgGetMaxStringCharCount(
 FgBool fgToStringFromUtf8(
     FgString *          _to
     , const FgUtf8 *    _FROM
+    , FgSize *          _outputLength
+    , FgSize *          _inputLength
 )
 {
     //TODO
@@ -20,6 +22,8 @@ FgBool fgToStringFromUtf8(
 FgBool fgToStringFromUtf16(
     FgString *          _to
     , const FgUtf16 *   _FROM
+    , FgSize *          _outputLength
+    , FgSize *          _inputLength
 )
 {
     //TODO
@@ -29,6 +33,8 @@ FgBool fgToStringFromUtf16(
 FgBool fgToStringFromUtf32(
     FgString *          _to
     , const FgUtf32 *   _FROM
+    , FgSize *          _outputLength
+    , FgSize *          _inputLength
 )
 {
     //TODO

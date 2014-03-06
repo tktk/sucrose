@@ -4,6 +4,8 @@
 FgBool fgToUtf8FromString(
     FgUtf8 *            _to
     , const FgString *  _FROM
+    , FgSize *          _outputLength
+    , FgSize *          _inputLength
 )
 {
     //TODO
@@ -13,6 +15,8 @@ FgBool fgToUtf8FromString(
 FgBool fgToUtf8FromUtf16(
     FgUtf8 *            _to
     , const FgUtf16 *   _FROM
+    , FgSize *          _outputLength
+    , FgSize *          _inputLength
 )
 {
     //TODO
@@ -22,6 +26,8 @@ FgBool fgToUtf8FromUtf16(
 FgBool fgToUtf8FromUtf32(
     FgUtf8 *            _to
     , const FgUtf32 *   _FROM
+    , FgSize *          _outputLength
+    , FgSize *          _inputLength
 )
 {
     //TODO
