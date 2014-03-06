@@ -15,6 +15,8 @@ def setup(
         common.SUCROSE : {
             MODULE_NAME : {
                 _IMPL_NAME : {
+                    'setup.cpp',
+                    'iconv.cpp',
                     'tostring.cpp',
                     'toutf8.cpp',
                     'toutf16.cpp',

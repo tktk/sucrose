@@ -1,4 +1,6 @@
-﻿#include "fg/util/export.h"
+﻿#include "sucrose/strconv/iconv/iconv.h"
+
+#include "fg/util/export.h"
 #include "fg/strconv/toutf32.h"
 
 FgBool fgToUtf32FromString(
@@ -8,8 +10,12 @@ FgBool fgToUtf32FromString(
     , FgSize *          _inputLength
 )
 {
-    //TODO
-    return false;
+    return sucrose::iconv(
+        *_to
+        , *_FROM
+        , *_outputLength
+        , *_inputLength
+    );
 }
 
 FgBool fgToUtf32FromUtf8(
