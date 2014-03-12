@@ -25,8 +25,12 @@ FgBool fgToUtf32FromUtf8(
     , FgSize *          _inputLength
 )
 {
-    //TODO
-    return false;
+    return sucrose::iconv(
+        *_to
+        , *_FROM
+        , *_outputLength
+        , *_inputLength
+    );
 }
 
 FgBool fgToUtf32FromUtf16(
@@ -36,6 +40,10 @@ FgBool fgToUtf32FromUtf16(
     , FgSize *          _inputLength
 )
 {
-    //TODO
-    return false;
+    return sucrose::iconv(
+        *_to
+        , *_FROM
+        , *_outputLength
+        , *_inputLength
+    );
 }

@@ -1,11 +1,13 @@
-﻿#include "fg/util/export.h"
+﻿#include "fg/strconv/toutf8.h"
+#include "sucrose/strconv/iconv/iconv.h"
+
+#include "fg/util/export.h"
 #include "fg/strconv/tostring.h"
 
 FgSize fgGetMaxStringCharCount(
 )
 {
-    //TODO
-    return 0;
+    return FG_MAX_UTF8_CHAR_COUNT;
 }
 
 FgBool fgToStringFromUtf8(
@@ -15,8 +17,12 @@ FgBool fgToStringFromUtf8(
     , FgSize *          _inputLength
 )
 {
-    //TODO
-    return false;
+    return sucrose::iconv(
+        *_to
+        , *_FROM
+        , *_outputLength
+        , *_inputLength
+    );
 }
 
 FgBool fgToStringFromUtf16(
@@ -26,8 +32,12 @@ FgBool fgToStringFromUtf16(
     , FgSize *          _inputLength
 )
 {
-    //TODO
-    return false;
+    return sucrose::iconv(
+        *_to
+        , *_FROM
+        , *_outputLength
+        , *_inputLength
+    );
 }
 
 FgBool fgToStringFromUtf32(
@@ -37,6 +47,10 @@ FgBool fgToStringFromUtf32(
     , FgSize *          _inputLength
 )
 {
-    //TODO
-    return false;
+    return sucrose::iconv(
+        *_to
+        , *_FROM
+        , *_outputLength
+        , *_inputLength
+    );
 }

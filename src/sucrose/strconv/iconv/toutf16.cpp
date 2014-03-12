@@ -1,4 +1,6 @@
-﻿#include "fg/util/export.h"
+﻿#include "sucrose/strconv/iconv/iconv.h"
+
+#include "fg/util/export.h"
 #include "fg/strconv/toutf16.h"
 
 FgBool fgToUtf16FromString(
@@ -8,8 +10,12 @@ FgBool fgToUtf16FromString(
     , FgSize *          _inputLength
 )
 {
-    //TODO
-    return false;
+    return sucrose::iconv(
+        *_to
+        , *_FROM
+        , *_outputLength
+        , *_inputLength
+    );
 }
 
 FgBool fgToUtf16FromUtf8(
@@ -19,8 +25,12 @@ FgBool fgToUtf16FromUtf8(
     , FgSize *          _inputLength
 )
 {
-    //TODO
-    return false;
+    return sucrose::iconv(
+        *_to
+        , *_FROM
+        , *_outputLength
+        , *_inputLength
+    );
 }
 
 FgBool fgToUtf16FromUtf32(
@@ -30,6 +40,10 @@ FgBool fgToUtf16FromUtf32(
     , FgSize *          _inputLength
 )
 {
-    //TODO
-    return false;
+    return sucrose::iconv(
+        *_to
+        , *_FROM
+        , *_outputLength
+        , *_inputLength
+    );
 }
