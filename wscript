@@ -7,7 +7,7 @@ from wscripts import sucrose
 import os.path
 
 APPNAME = 'sucrose'
-VERSION = '0.1.0'
+VERSION = '0.2.0'
 
 out = common.BUILD_DIR
 
