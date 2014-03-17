@@ -253,6 +253,7 @@ def _configureDefines( _context ):
 
 def _configureImpls( _context ):
     _configureStrconvImpl( _context )
+    _configureBootImpl( _context )
 
 def _configureStrconvImpl( _context ):
     STRCONV_IMPL = _context.options.strconvimpl
@@ -263,6 +264,16 @@ def _configureStrconvImpl( _context ):
     )
 
     _context.env.MY_STRCONV_IMPL = STRCONV_IMPL
+
+def _configureBootImpl( _context ):
+    BOOT_IMPL = _context.options.bootimpl
+
+    _context.msg(
+        cmdoption.BOOT_IMPL,
+        BOOT_IMPL,
+    )
+
+    _context.env.MY_BOOT_IMPL = BOOT_IMPL
 
 def build( _context ):
     sucrose.build( _context )

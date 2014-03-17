@@ -30,6 +30,9 @@ LINKER_TYPE_MSVC = 'msvc'
 STRCONV_IMPL = 'strconvimpl'
 STRCONV_IMPL_ICONV = 'iconv'
 
+BOOT_IMPL = 'bootimpl'
+BOOT_IMPL_DEFAULT = 'default'
+
 TYPE = 'type'
 _TYPE_STRING = 'string'
 
@@ -99,5 +102,9 @@ OPTIONS = {
     STRCONV_IMPL : {
         TYPE : _TYPE_STRING,
         DEFAULT : STRCONV_IMPL_ICONV,
+    },
+    BOOT_IMPL : {
+        TYPE : _TYPE_STRING,
+        DEFAULT : BOOT_IMPL_DEFAULT,
     },
 }
