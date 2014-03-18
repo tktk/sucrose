@@ -1,5 +1,4 @@
-﻿
-#include "fg/util/export.h"
+﻿#include "fg/util/export.h"
 #include "fg/boot/config.h"
 
 FgBootConfig * fgBootConfigNew(
