@@ -1,4 +1,5 @@
-﻿#include "sucrose/boot/config.h"
+﻿#include "sucrose/boot/default/config.h"
+#include "fg4cpp/def/common/primitives.h"
 
 #include <new>
 
@@ -23,6 +24,12 @@ FgBool fgBootConfigSetMainFile(
     , const FgUtf32 *   _MAIN_FILE
 )
 {
-    //TODO
-    return false;
+    _this->mainFileBuffer.assign(
+        _MAIN_FILE->ptr
+        , _MAIN_FILE->length
+    );
+    auto &  mainFile = fg::toFgpp( _this->mainFile );
+    mainFile.assign( _this->mainFileBuffer );
+
+    return true;
 }
