@@ -17,3 +17,12 @@ void fgBootConfigFree(
 {
     delete _this;
 }
+
+FgBool fgBootConfigSetMainFile(
+    FgBootConfig *      _this
+    , const FgUtf32 *   _MAIN_FILE
+)
+{
+    //TODO
+    return false;
+}
