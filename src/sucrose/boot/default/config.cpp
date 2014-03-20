@@ -6,6 +6,24 @@
 #include "fg/util/export.h"
 #include "fg/boot/config.h"
 
+namespace {
+    FgBool assign(
+        FgUtf32 &           _to
+        , fg::BUtf32 &      _toBuffer
+        , const FgUtf32 *   _FROM
+    )
+    {
+        _toBuffer.assign(
+            _FROM->ptr
+            , _FROM->length
+        );
+        auto &  to = fg::toFgpp( _to );
+        to.assign( _toBuffer );
+
+        return true;
+    }
+}
+
 FgBootConfig * fgBootConfigNew(
 )
 {
@@ -24,14 +42,11 @@ FgBool fgBootConfigSetMainFile(
     , const FgUtf32 *   _MAIN_FILE
 )
 {
-    _this->mainFileBuffer.assign(
-        _MAIN_FILE->ptr
-        , _MAIN_FILE->length
+    return assign(
+        _this->mainFile
+        , _this->mainFileBuffer
+        , _MAIN_FILE
     );
-    auto &  mainFile = fg::toFgpp( _this->mainFile );
-    mainFile.assign( _this->mainFileBuffer );
-
-    return true;
 }
 
 FgBool fgBootConfigSetMainType(
@@ -39,14 +54,11 @@ FgBool fgBootConfigSetMainType(
     , const FgUtf32 *   _MAIN_TYPE
 )
 {
-    _this->mainTypeBuffer.assign(
-        _MAIN_TYPE->ptr
-        , _MAIN_TYPE->length
+    return assign(
+        _this->mainType
+        , _this->mainTypeBuffer
+        , _MAIN_TYPE
     );
-    auto &  mainType = fg::toFgpp( _this->mainType );
-    mainType.assign( _this->mainTypeBuffer );
-
-    return true;
 }
 
 FgBool fgBootConfigSetMain(
@@ -54,6 +66,9 @@ FgBool fgBootConfigSetMain(
     , const FgUtf32 *   _MAIN
 )
 {
-    //TODO
-    return false;
+    return assign(
+        _this->main
+        , _this->mainBuffer
+        , _MAIN
+    );
 }

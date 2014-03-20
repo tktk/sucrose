@@ -10,7 +10,8 @@ struct FgBootConfig
     fg::BUtf32  mainFileBuffer;
     FgUtf32     mainType;
     fg::BUtf32  mainTypeBuffer;
-    //TODO
+    FgUtf32     main;
+    fg::BUtf32  mainBuffer;
 };
 
 #endif  // SUCROSE_BOOT_DEFAULT_CONFIG_H
