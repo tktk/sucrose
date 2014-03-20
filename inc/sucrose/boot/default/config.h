@@ -8,6 +8,8 @@ struct FgBootConfig
 {
     FgUtf32     mainFile;
     fg::BUtf32  mainFileBuffer;
+    FgUtf32     mainType;
+    fg::BUtf32  mainTypeBuffer;
     //TODO
 };
 

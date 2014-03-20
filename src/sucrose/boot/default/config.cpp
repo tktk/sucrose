@@ -39,6 +39,12 @@ FgBool fgBootConfigSetMainType(
     , const FgUtf32 *   _MAIN_TYPE
 )
 {
-    //TODO
-    return false;
+    _this->mainTypeBuffer.assign(
+        _MAIN_TYPE->ptr
+        , _MAIN_TYPE->length
+    );
+    auto &  mainType = fg::toFgpp( _this->mainType );
+    mainType.assign( _this->mainTypeBuffer );
+
+    return true;
 }
