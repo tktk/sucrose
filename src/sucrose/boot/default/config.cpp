@@ -48,3 +48,12 @@ FgBool fgBootConfigSetMainType(
 
     return true;
 }
+
+FgBool fgBootConfigSetMain(
+    FgBootConfig *      _this
+    , const FgUtf32 *   _MAIN
+)
+{
+    //TODO
+    return false;
+}
